@@ -2,10 +2,10 @@
 <strong>En</strong>
 <p>Project realised during web developper courses: Creating an e-commerce website.</p>
 
-<span style="text-decoration: underline;"><p>Used languages:</p></span>
+<u><p>Used languages:</p></u>
 <p>TML5, CSS3, JavaScript</p>
 <br>
-<span style="text-decoration: underline;"><p>Used frameworks:</p></span>
+<u><p>Used frameworks:</p></u>
 <p>Bootstrap 4, Jquery<p>
 
 ----------------------------------------------------------------------------------------
@@ -13,8 +13,8 @@
 <strong>Fr</strong>
 <p>Réalisé en cours de formation Web Developpeur: Création d'un site e-commerce avec panier.</p>
 
-<span style="text-decoration: underline;"><p>Langages utilisés:</p></span> 
+<u><p>Langages utilisés:</p></u> 
 <p>HTML5, CSS3, JavaScript</p>
 <br>
-<span style="text-decoration: underline;"><p>Frameworks utilisés:</p></span>
+<u><p>Frameworks utilisés:</p></u>
 <p>Bootstrap 4, Jquery</p>
