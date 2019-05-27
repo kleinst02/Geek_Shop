@@ -1,5 +1,5 @@
 # Geek_Shop
-En
+<strong>En</strong>
 Project realised during web developper courses: Creating an e-commerce website.
 
 Used languages:
