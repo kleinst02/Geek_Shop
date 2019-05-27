@@ -4,7 +4,7 @@
 
 <p>Used languages:</p>
 <p>TML5, CSS3, JavaScript</p>
-
+<br>
 <p>Used frameworks:</p>
 <p>Bootstrap 4, Jquery<p>
 
@@ -15,6 +15,6 @@
 
 <p>Langages utilisés:</p> 
 <p>HTML5, CSS3, JavaScript</p>
-
+<br>
 <p>Frameworks utilisés:</p>
 <p>Bootstrap 4, Jquery</p>
