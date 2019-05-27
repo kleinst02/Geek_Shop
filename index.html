@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="stylesheet" href="Assets/css/style.css">
+  <title>Geek Shop | Tel and Power</title>
+  <link rel="stylesheet" href="librairy/bootstrap-4.3.1-dist/css/bootstrap.css" />
+  <link rel="icon" href="assets/img/logo.ico" />
+</head>
+<body>
+  <!--Navbar-->
+  <div class="navbar border col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 sticky-top bg-white shadow-sm">
+    <!--Logo GeekShop-->
+    <div class="logo col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+      <img class="img_logo" type="button" src="assets/img/logo.png" alt="Geek Shop" data-toggle="modal" data-target="#modallogo" />
+    </div>
+    <!--Bouton déroulant des catégories-->
+    <div class="dropdown show col-xl-2 col-lg-2 col-md-2 col-sm-2 col-5">
+      <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Catégories
+      </a>
+      <div class="container-fluid dropdown-menu justify-content-start" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="#tel" id="telbutton">Téléphones</a>
+        <a class="dropdown-item" href="#bat" id="batbutton">Batteries</a>
+      </div>
+    </div>
+    <!--Compteur du nombre de produits-->
+    <div class="Nb_products col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 border shadow-sm">
+      <p class="my-auto font-weight-bold text-secondary text-center">Nombre de produits :</p>
+    </div>
+    <div class="col-md-1" id="nbproducts">
+    </div>
+    <div class="Prix_total col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 border shadow-sm">
+      <p class="my-auto font-weight-bold text-secondary text-center">Prix Total :</p>
+    </div>
+    <div class="col-md-1" id="prixtotal">
+    </div>
+    <div class="panier col-xl-2 col-lg-2 col-md-2 col-sm-2 col-4">
+      <a type="button" data-target="#exampleModal" data-toggle="modal"><img class="img_caddie" data-toggle="tooltip" data-placement="bottom" title="Mon panier" src="assets/img/panier.png" alt="Panier" id="img_caddie"/></a>
+    </div>
+  </div>
+  <!--Fenêtre modal Logo-->
+  <div class="modal" tabindex="-1" role="dialog" id="modallogo">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img class="modal-title" src="assets/img/logo.png" />
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center font-weight-bold">
+          <p>Votre boutique de téléphones et de batteries en ligne.</p>
+          <p>Pour les Geeks, mais pas que!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--fenêtre modal panier-->
+  <div class="modal fade" id="exampleModal" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 bloc13">
+              <div class="col-xl-12 text-center font-weight-bold border Bloc1">Votre panier:</div>
+              <div class="bg-secondary col-xl-12 text-white text-center border" id="Bloc3">
+                <div id="reduce1"></div>
+                <button id="produc1">-</button><button id="proc1">+</button>
+                <div id="reduce2"></div>
+                <button id="produc2">-</button><button id="proc2">+</button>
+                <div id="reduce3"></div>
+                <button id="produc3">-</button><button id="proc3">+</button>
+                <div id="reduce4"></div>
+                <button id="produc4">-</button><button id="proc4">+</button>
+                <div id="reduce5"></div>
+                <button id="produc5">-</button><button id="proc5">+</button>
+                <div id="reduce6"></div>
+                <button id="produc6">-</button><button id="proc6">+</button>
+                <div id="reduce7"></div>
+                <button id="produc7">-</button><button id="proc7">+</button>
+                <div id="reduce8"></div>
+                <button id="produc8">-</button><button id="proc8">+</button>
+                <div id="reduce9"></div>
+                <button id="produc9">-</button><button id="proc9">+</button>
+                <div id="reduce10"></div>
+                <button id="produc10">-</button><button id="proc10">+</button>
+                <div id="reduce11"></div>
+                <button id="produc11">-</button><button id="proc11">+</button>
+                <div id="reduce12"></div>
+                <button id="produc12">-</button><button id="proc12">+</button>
+              </div>
+            </div>
+            <div class="col-xl-4 text-center border Bloc2">
+              <div><h5>Prix unité</h5></div>
+              <div id="prod1"></div>
+              <div class="espace" id="prod2"></div>
+              <div class="espace" id="prod3"></div>
+              <div class="espace" id="prod4"></div>
+              <div class="espace" id="prod5"></div>
+              <div class="espace" id="prod6"></div>
+              <div class="espace" id="prod7"></div>
+              <div class="espace" id="prod8"></div>
+              <div class="espace" id="prod9"></div>
+              <div class="espace" id="prod10"></div>
+              <div class="espace" id="prod11"></div>
+              <div class="espace" id="prod12"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-8 lg-4 text-center font-weight-bold border Bloc5">Total</div>
+            <div class="col-md-4 lg-4 text-center bg-light border Bloc4"></div>
+          </div>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">X Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bloc Téléphones -->
+  <div class="bg-light col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="tel">
+    <!--1ère ligne de téléphones-->
+    <div class="bloc1tel row col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 justify-content-center" id="TEL01_TEL02">
+      <!--Bloc Huawei Psmart 2019-->
+      <div class="huawei_2019 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 my-4 text-center">
+        <div class="huawei_pic">
+          <img src="assets/img/huawei2019.png" class="huawei2019" alt="HUAWEI PSMART 2019"/>
+          <p>Ref: TEL01</p>
+        </div>
+        <div>
+          <p><strong>Huawei PSMART 2019</strong></p>
+          <p>Doté d'une luminosité epoustouflante et de couleurs saisissantes, l'incroyable écran HUAWEI FullView de 6,21 pouces embarque un tout nouveau design.</p>
+        </div>
+        <div>
+          <h1>185 €</h1>
+          <button type="button" class="btn btn-primary" id=TEL01>Acheter</button>
+        </div>
+      </div>
+      <!--Bloc Iphone XR-->
+      <div class="iphone_xr col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center my-4">
+        <div class="iphone_xr_pic">
+          <img src="assets/img/iphonexr.png" class="iphonexr" alt="IPHONE XR"/>
+          <p>Ref: TEL02</p>
+        </div >
+        <div>
+          <p><strong>Iphone XR</strong></p>
+          <p>Des bandes en aluminium de qualité aérospatiale haute précision. Résistance à l’eau et à la poussière. Et six superbes nouvelles finitions.</p>
+        </div>
+        <div>
+          <h1>855 €</h1>
+          <button type="button" class="btn btn-primary" id=TEL02>Acheter</button>
+        </div>
+      </div>
+    </div>
+    <!--Seconde ligne de téléphones-->
+    <div class="row col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="TEL03_TEL04">
+      <!--Bloc Iphone XS-->
+      <div class="iphone_xs col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center my-4">
+        <div class="iphone_xs_pic">
+          <img src="assets/img/iphonexs.png" class="iphonexs" alt="IPHONE XS"/>
+          <p>Ref: TEL03</p>
+        </div >
+        <div>
+          <p><strong>Iphone XS</strong></p>
+          <p>Une superbe nouvelle finition or, obtenue au terme d’un procédé au niveau atomique. Des bandes d’acier inoxydable chirurgical usinées avec précision.</p>
+        </div>
+        <div>
+          <h1>1259 €</h1>
+          <button type="button" class="btn btn-primary" id=TEL03>Acheter</button>
+        </div>
+      </div>
+      <!--Bloc Huawei P20-->
+      <div class="p20 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center my-4">
+        <div class="huaweiP20_pic">
+          <img src="assets/img/p20.png" class="huaweip20" alt="HUAWEI P20"/>
+          <p>Ref: TEL04</p>
+        </div>
+        <div>
+          <p><strong>Huawei P20</strong></p>
+          <p>Le Huawei P20 s'appuie sur la puissance de l'Intelligence Artificielle pour analyser le sujet de votre photo en temps réel.</p>
+        </div>
+        <div>
+          <h1>379 €</h1>
+          <button type="button" class="btn btn-primary" id=TEL04>Acheter</button>
+        </div>
+      </div>
+    </div>
+    <!--Troisième ligne de téléphones-->
+    <div class="row col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="TEL05_TEL06">
+      <!--Bloc Huawei P30-->
+      <div class="p30 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center my-4">
+        <div class="huaweiP30_pic">
+          <img src="assets/img/p30.png" class="huaweip30" alt="HUAWEI P30"/>
+          <p>Ref: TEL05</p>
+        </div>
+        <div>
+          <p><strong>Huawei P30</strong></p>
+          <p>Le Huawei P20 s'appuie sur la puissance de l'Intelligence Artificielle pour analyser le sujet de votre photo en temps réel.</p>
+        </div>
+        <div>
+          <h1>799 €</h1>
+          <button type="button" class="btn btn-primary" id=TEL05>Acheter</button>
+        </div>
+      </div>
+      <!--Bloc Huawei PSMART-->
+      <div class="psmart col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center my-4">
+        <div class="psmart_pic">
+          <img src="assets/img/psmart.png" class="psmart" alt="PSMART"/>
+          <p>Ref: TEL06</p>
+        </div>
+        <div>
+          <p><strong>Huawei PSMART</strong></p>
+          <p>Doté d'une luminosité epoustouflante et de couleurs saisissantes, l'incroyable écran HUAWEI FullView de 6,21 pouces embarque un tout nouveau design.</p>
+        </div>
+        <div>
+          <h1>229 €</h1>
+          <button type="button" class="btn btn-primary" id=TEL06>Acheter</button>
+        </div>
+      </div>
+    </div>
+    <!--Quatrième ligne de téléphones-->
+    <div class="row col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="TEL07_TEL08">
+      <!--Bloc Samsung S9-->
+      <div class="s9 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center my-4">
+        <div class="">
+          <img src="assets/img/s9.png" class="s9" alt="GALAXY S9"/>
+          <p>Ref: TEL07</p>
+        </div>
+        <div>
+          <p><strong>Samsung GALAXY S9</strong></p>
+          <p>Le smartphone qui vous immerge dans l'image. Regardez vos photos et vidéos comme vous en avez toujours rêvé, avec un sentiment d'immersion sans égal.</p>
+        </div>
+        <div>
+          <h1>436 €</h1>
+          <button type="button" class="btn btn-primary" id=TEL07>Acheter</button>
+        </div>
+      </div>
+      <!--Bloc Samsung S10-->
+      <div class="psmart s10 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 text-center my-4">
+        <div class="psmart_pic">
+          <img src="assets/img/s10.png" class="s10" alt="GALAXY S10"/>
+          <p>Ref: TEL08</p>
+        </div>
+        <div>
+          <p><strong>Samsung GALAXY S10</strong></p>
+          <p>Découvrez l'écran Infinity pour une immersion vraiment totale. Réduction maximale des bords de l'écran pour plonger au cœur de l'image.</p>
+        </div>
+        <div>
+          <h1>665 €</h1>
+          <button type="button" class="btn btn-primary" id=TEL08>Acheter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--partie christophe les batteries-->
+  <div class="bg-light col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 bloc2bat" id="bat">
+    <!--batterie numero1 avec prix et réfèrence plus bouton d'achat-->
+    <div class="row col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 blocbat1">
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 my-4 text-center">
+        <div class="">
+          <img src="assets/img/element0.jpg" width="70%" class="element0" alt=""/>
+          <p>Ref: BAT01</p>
+        </div >
+        <div>
+          <p><strong>batteries externes multicolores</strong></p>
+          <p>Le Power Bank Element est une batterie nomade épurée et élégante qui deviendra l'accessoire indispensable du téléphone ou tablette de vos clients. L'enveloppe extérieure est en aluminium ce qui permet que votre logo y soit sérigraphié.</p><!--descriptif-->
+        </div>
+        <div>
+          <h1>124€</h1>
+          <button type="button" class="btn btn-primary" id="BAT01">Acheter</button>
+        </div>
+      </div>
+      <!--batterie numero2 avec prix et réfèrence plus bouton d'achat-->
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 my-4 text-center">
+        <div class="">
+          <img src="assets/img/megapower.jpg" width="70%"class="megapower" alt=""/>
+          <p>Ref: BAT02</p>
+        </div >
+        <div>
+          <p><strong>batterie de poche blanche</strong></p>
+          <p>iPosible Batterie Externe 24800mAh Power Bank Haute Capacité Chargeur Portable 2 Ports USB Batterie de Secours pour iPhone Samsung Huawei Sony et Autres Smartphones et Tablettes（Blanc).</p><!--descriptif-->
+        </div>
+        <div>
+          <h1>152 €</h1>
+          <button type="button" class="btn btn-primary" id="BAT02">Acheter</button>
+        </div>
+      </div>
+    </div>
+    <!--batterie numero3 avec prix et réfèrence plus bouton d'achat-->
+    <div class="row col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 blocbat2">
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 my-4 text-center">
+        <div class="">
+          <img src="assets/img/powerbankwireless.jpg" width="70%" class="powerbankwireless" alt=""/>
+          <p>Ref: BAT03</p>
+        </div >
+        <div>
+          <p><strong>batterie sans fil rouge</strong></p>
+          <p>KEDRON Express E1 Batterie Externe 24000mAh Chargeur Sans Fil Rapide Chargeur à Induction avec 3 Ports USB & 2.</p><!--descriptif-->
+        </div>
+        <div>
+          <h1>61€</h1>
+          <button type="button" class="btn btn-primary" id="BAT03">Acheter</button>
+        </div>
+      </div>
+      <!--batterie numero4 avec prix et réfèrence plus bouton d'achat-->
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 my-4 text-center">
+        <div class="">
+          <img src="assets/img/radiopowerbank.jpg"  width="70%"class="radiopowerbank" alt=""/>
+          <p>Ref: BAT04</p>
+        </div >
+        <div>
+          <p><strong>Batteries style radio multicolores</strong></p>
+          <p>Batterie en forme de radio fournie avec chargeur pour téléphone portable. Style rétro très tendance.</p><!--descriptif-->
+        </div>
+        <div>
+          <h1>115 €</h1>
+          <button type="button" class="btn btn-primary" id="BAT04">Acheter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Footer-->
+  <footer class="page-footer font-small indigo border-top">
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Besoin d'aide</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Contactez-nous</a>
+            </li>
+            <li>
+              <a href="#!">Questions fréquentes</a>
+            </li>
+            <li>
+              <a href="#!">Retourner un produit</a>
+            </li>
+            <li>
+              <a href="#!">Nos conditions de livraison</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none">
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Informations légales</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Nos Conditions de Vente</a>
+            </li>
+            <li>
+              <a href="#!">Mentions légales</a>
+            </li>
+            <li>
+              <a href="#!">Utilisation des Cookies</a>
+            </li>
+            <li>
+              <a href="#!">Les avis en ligne</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none">
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">À propos de Geek Shop</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Nos engagements</a>
+            </li>
+            <li>
+              <a href="#!">Nos services</a>
+            </li>
+            <li>
+              <a href="#!">L'espace fidélité</a>
+            </li>
+            <li>
+              <a href="#!">Cartes & Coffrets cadeaux</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none">
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Actualités</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Enregistrer votre produit</a>
+            </li>
+            <li>
+              <a href="#!">Réglementation et recyclage</a>
+            </li>
+            <li>
+              <a href="#!">Centre de presse</a>
+            </li>
+            <li>
+              <a href="#!">Galerie Photo</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+    <!-- Footer Links -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Geek Shop 2019 Copyright:
+      <a href="#"> GeekShop.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!--Appel des librairies et du fichier javascript-->
+  <script src="librairy/jquery-3.3.1.min.js"></script>
+  <script src="librairy/bootstrap-4.3.1-dist/js/bootstrap.js" ></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

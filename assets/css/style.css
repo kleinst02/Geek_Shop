@@ -1,0 +1,50 @@
+html, body{
+  padding: 0;
+  margin: 0;
+}
+
+.img_logo {
+  width: 60px;
+}
+
+.img_caddie{
+  width: 50px;
+}
+
+.huawei2019, .iphonexr, .iphonexs, .huaweip20, .huaweip30, .psmart, .s9, .s10, .element0, .megapower, .powerbankwireless, .radiopowerbank {
+  width: 100px;
+}
+
+.element0, .megapower, .powerbankwireless, .radiopowerbank {
+  width: 200px;
+  height: 200px;
+}
+
+@media screen and (max-width:768px){
+  #nbproducts, #prixtotal, .Nb_products, .Prix_total{
+    display: none;
+  }
+}
+@media screen and (max-width:580px){
+  #nbproducts, #prixtotal, .Nb_products, .Prix_total{
+    display: none;
+  }
+}
+
+@media screen and (max-width:500px){
+  .panier{
+    padding-left: 15px;
+  }
+}
+
+.bloc1tel, .iphone_xr, .huawei_2019{
+  padding: 0;
+  margin: 0;
+}
+
+#bat {
+  margin-left: 0;
+}
+.espace {
+  padding-top: 15px;
+}
