@@ -1,6 +1,6 @@
 # Geek_Shop
 <strong>En</strong>
-Project realised during web developper courses: Creating an e-commerce website.
+<p>Project realised during web developper courses: Creating an e-commerce website.</p>
 
 Used languages:
 HTML5, CSS3, JavaScript
@@ -11,7 +11,7 @@ Bootstrap 4, Jquery
 ----------------------------------------------------------------------------------------
 
 Fr
-Réalisé en cours de formation Web Developpeur: Création d'un site e-commerce avec panier.
+<p>Réalisé en cours de formation Web Developpeur: Création d'un site e-commerce avec panier.</p>
 
 Langages utilisés: 
 HTML5, CSS3, JavaScript
