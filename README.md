@@ -10,7 +10,7 @@ Bootstrap 4, Jquery
 
 ----------------------------------------------------------------------------------------
 
-Fr
+<strong>Fr</strong>
 <p>Réalisé en cours de formation Web Developpeur: Création d'un site e-commerce avec panier.</p>
 
 Langages utilisés: 
